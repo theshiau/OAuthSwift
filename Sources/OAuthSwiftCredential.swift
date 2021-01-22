@@ -367,7 +367,7 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
 
     open func authorizationParameters(_ body: Data?, timestamp: String, nonce: String) -> OAuthSwift.Parameters {
         var authorizationParameters = OAuthSwift.Parameters()
-        authorizationParameters["oauth_version"] = self.version.shortVersion
+        // authorizationParameters["oauth_version"] = self.version.shortVersion
         authorizationParameters["oauth_signature_method"] =  self.signatureMethod.rawValue
         authorizationParameters["oauth_consumer_key"] = self.consumerKey
         authorizationParameters["oauth_timestamp"] = timestamp
